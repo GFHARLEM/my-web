@@ -37,12 +37,22 @@
       #title{
          font-family:'Russo One';font-size:2rem;
          font-size:3rem;
-         text-shadow: 0 0 20px rgba(255,0,110,0.6);
+         text-shadow: 0 0 20px rgba(88, 28, 228, 0.6);
       }
+      
+       .hero-container{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        padding:15px 20px;
+
+       }
       .hero-swiper {
-         width: 80%;
-         height:400px;
-         max-height:400px;
+         width: 90%;
+         max-width:1200px;
+         height:50vh;
+         min-height:300px;
+         max-height:500px;
          border-radius: 15px;
          overflow: hidden;
          margin-top: 15px;
@@ -83,19 +93,40 @@
         cursor: pointer;
         transition: transform 0.6s;
       }
-      @media (max-width:600px){
+     
+
+      .row img:hover {
+        transform: scale(1.2); }
+
+        .search {border-top-right-radius: 10px;}
+         @media (max-width:600px){
      .row img {
         width:120px;
         max-height:220px;
 
         }
       }
-
-      .row img:hover {
-        transform: scale(1.2); }
-
-        .search {border-top-right-radius: 10px;}
-      
+        @media (max-width: 768px) {
+        #title {
+          font-size: 2.5rem;
+        }
+    }
+       @media (max-width: 480px) {
+        #title {
+          font-size: 2rem;
+        }
+      }
+      @media (max-width: 480px) {
+    .hero-container {
+        padding: 10px 15px; /* Less padding on mobile */
+    }
+    
+    .hero-swiper {
+        height: 30vh; /* Even smaller height on phones */
+        min-height: 200px;
+        border-radius: 10px; /* Slightly smaller radius on mobile */
+    }
+}
     </style>
   </head>
   <body>
@@ -109,6 +140,7 @@
         THEE GAMING HUB
      </div></div>
   </header>
+  <div class="hero-container">
   <div class="swiper hero-swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
@@ -117,6 +149,7 @@
     <div class="swiper-slide">
       <img src="images/reddeadhero.jfif" />
     </div>
+ </div>
     <div class="swiper-slide">
       <img src="images/sanandreashero.jfif" />
     </div>
@@ -176,6 +209,5 @@
     speed: 800
   });
 </script>
-
 
 </html>
