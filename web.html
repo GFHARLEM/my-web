@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>THEE HUB</title>
+    <style>
+      header{
+       display: flex;
+        justify-content: space-between;     
+        align-items: center;        
+         height: 70px;               
+         position: sticky;
+         top: 0;
+            z-index: 1000;
+         background-color: #111;
+         margin: 0;                  
+         padding: 0 20px;
+      }
+      #logo-container{
+        flex: 0 0auto;
+      }
+      #logo{
+        width:50px;
+        height:50px; 
+      }
+      #title-container{
+        flex:1;
+        display:flex;
+        justify-content:center;
+        position:absolute;
+        width:100%;
+        left:0;
+      }
+      #title{
+         font-family:'Russo One';font-size:2rem;
+         font-size:3rem;
+         text-shadow: 0 0 20px rgba(255,0,110,0.6);
+      }
+      .hero-swiper {
+         width: 80%;
+         height:400px;
+         max-height:400px;
+         border-radius: 15px;
+         overflow: hidden;
+         margin-top: 15px;
+}
+
+      .hero-swiper img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+}
+
+      body {
+        background-color: #111; 
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h2 {
+        margin: 10px 0;
+      }
+
+      .row {
+        display: flex;
+        overflow-x: auto; 
+        gap: 15px; 
+        padding: 10px 0;
+        scroll-behavior: smooth; 
+      }
+
+      .row img {
+        height: auto;
+        width: 150px;
+        max-height:300px;
+        object-fit: cover; 
+        border-radius: 10px; 
+        cursor: pointer;
+        transition: transform 0.6s;
+      }
+      @media (max-width:600px){
+     .row img {
+        width:120px;
+        max-height:220px;
+
+        }
+      }
+
+      .row img:hover {
+        transform: scale(1.2); }
+
+        .search {border-top-right-radius: 10px;}
+      
+    </style>
+  </head>
+  <body>
+    
+  <header>
+    <div id="logo-container">
+     <img id="logo"  src="images/logo.png" alt="logo" />
+     </div>
+     <div id="title-container">
+     <div id="title" >
+        THEE GAMING HUB
+     </div></div>
+  </header>
+  <div class="swiper hero-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="images/fortnitehero.jfif" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/reddeadhero.jfif" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/sanandreashero.jfif" />
+    </div>
+  </div>
+
+  <div class="swiper-pagination"></div>
+</div>
+
+
+  <div >
+    <input type="search" name="search">
+    <input type="submit" class="search"value="search">
+  </div>
+    <h2>Popular Games</h2>
+    <div class="row">
+      <img src="images/spider.jpeg" alt="Game 1" />
+      <img src="images/gtav.jpeg" alt="Game 2" />
+      <img src="images/fc25.jpeg" alt="Game 3" />
+      <img src="images/gtavi.jpeg" alt="Game 4" />
+      <img src="images/mw.jpeg" alt="Game 5" /><br />
+      <img src="images/fc26.jpeg" alt="Game 6" />
+      <img src="images/csgo.jpeg" alt="Game 7" />
+      <img src="images/farcry6.jpeg" alt="Game 8" />
+      <img src="images/reddead.jpeg" alt="Game 9" />
+      <img src="images/watchdogs.jpeg" alt="Game 10" />
+      <img src="images/ufc5.jpeg" alt="Game 11" />
+      <img src="images/sniperelite.jpeg" alt="Game 12" />
+      <img src="images/mk11.jpeg" alt="Game 13" />
+      <img src="images/nba2k26.jpeg" alt="Game 14" />
+      <img src="images/codblackopps.jpeg" alt="Game 15" />
+       <img src="images/uncharted.jpeg" alt="Game 16" />
+    </div>
+
+    <h2>New Releases</h2>
+    <div class="row">
+      <img src="images/gtavi.jpeg" alt="Game 6" />
+      <img src="images/fc26.jpeg" alt="Game 7" />
+      <img src="images/farcry6.jpeg" alt="Game 8" />
+      <img src="images/nba2k26.jpeg" alt="Game 14" />
+      <img src="images/watchdogs.jpeg" alt="Game 10" />
+      <img src="images/ufc5.jpeg" alt="Game 11" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  </body>
+  <script>
+  const swiper = new Swiper('.hero-swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    effect: 'fade', // smooth fading like Netflix
+    speed: 800
+  });
+</script>
+
+</html>
