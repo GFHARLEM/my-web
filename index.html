@@ -7,38 +7,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <title>THEE HUB</title>
     <style>
-      header{
-       display: flex;
-        justify-content: space-between;     
-        align-items: center;        
-         height: 70px;               
-         position: sticky;
-         top: 0;
-            z-index: 1000;
-         background-color: #111;
-         margin: 0;                  
-         padding: 0 20px;
-      }
-      #logo-container{
-        flex: 0 0auto;
-      }
-      #logo{
-        width:50px;
-        height:50px; 
-      }
-      #title-container{
-        flex:1;
-        display:flex;
-        justify-content:center;
-        position:absolute;
-        width:100%;
-        left:0;
-      }
-      #title{
+    .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#111;
+  padding: 10px 20px;
+  position: sticky;
+   top:0;
+   z-index:1000;
+}
+
+/* 3 columns equal width */
+.header > div {
+  flex: 1;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Center column text */
+.center {
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(20px, 5vw, 50px); /* Fully responsive */
+  margin: 0;
+}
+
+/* On very small screens, let title shrink before overlapping */
+@media (max-width: 400px) {
+  .logo {
+    height: 40px;
+  }
+
+  .title {
+    font-size: clamp(18px, 6vw, 40px);
+    
+  }
+}
+
+      .title{
          font-family:'Russo One';font-size:2rem;
-         font-size:3rem;
+         white-space: nowrap;
          text-shadow: 0 0 20px rgba(88, 28, 228, 0.6);
-         margin-left:1rem;
+         
       }
       
        .hero-container{
@@ -133,15 +150,20 @@
   </head>
   <body>
     
-  <header>
-    <div id="logo-container">
-     <img id="logo"  src="images/logo.png" alt="logo" />
-     </div>
-     <div id="title-container">
-     <div id="title" >
-        THEE GAMING HUB
-     </div></div>
-  </header>
+ <header class="header">
+  <div class="left">
+    <img src="images/logo.png" alt="Logo" class="logo">
+  </div>
+
+  <div class="center">
+    <h1 class="title">THEE GAMING HUB</h1>
+  </div>
+
+  <div class="right">
+    <!-- Empty, helps with perfect centering -->
+  </div>
+</header>
+
   <div class="hero-container">
   <div class="swiper hero-swiper">
   <div class="swiper-wrapper">
@@ -155,6 +177,12 @@
     <div class="swiper-slide">
       <img src="images/sanandreashero.jfif" />
     </div>
+    <div class="swiper-slide">
+      <img src="images/gow.jfif" />
+      </div>
+      <div class="swiper-slide">
+      <img src="images/ps.jfif" />
+      </div>
   </div> </div>
 
   <div class="swiper-pagination"></div>
